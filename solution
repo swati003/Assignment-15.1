@@ -1,0 +1,13 @@
+creating table and loading the input data 
+------------------------------------------------------------------------------------------------------------------------------------------------------
+create table employee(name String,course String,rating int, college String)
+             row format delimited fields terminated by ',' lines terminated by '\n' stored as textfile ;
+  
+  
+  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+load data local inpath 'employee.txt' into table employee;
+------------------------------------------------------------------------------------------------------------------------
+
+a)
+
+select count(*) from employee group by course ;
